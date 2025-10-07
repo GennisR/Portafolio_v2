@@ -413,7 +413,7 @@ h2 {
     display: flex;
     flex-direction: column;
     margin-bottom: 3rem;
-    padding: 0 1rem;
+    padding: 3rem 1rem 0 1rem;
     position: relative;
 }
 
@@ -440,8 +440,8 @@ h2 {
     width: 100%;
 }
 
-.proyecto video {
-    width: 80%;
+.proyecto img {
+    width: 70%;
     margin: 0 auto;
     margin-top: 1rem;
     border-radius: 20px;
@@ -517,6 +517,9 @@ h2 {
     max-width: 500px;
     width: 90%;
     position: relative;
+    max-height: 400px; /* o cualquier altura deseada */
+    overflow-y: auto;  /* activa el scroll vertical */
+    padding: 1rem;
 }
 
 .cerrar-modal {
