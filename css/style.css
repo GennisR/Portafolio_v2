@@ -437,14 +437,14 @@ h2 {
 }
 
 .link img {
-    width: 100%;
+    width: 60% !important;
+    margin-top: 0 !important;
 }
 
 .proyecto img {
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
     margin-top: 1rem;
-    border-radius: 20px;
 }
 
 .ver-mas {
@@ -517,9 +517,19 @@ h2 {
     max-width: 500px;
     width: 90%;
     position: relative;
-    max-height: 400px; /* o cualquier altura deseada */
+    max-height: 500px; /* o cualquier altura deseada */
     overflow-y: auto;  /* activa el scroll vertical */
     padding: 1rem;
+}
+
+.modal-mockup {
+    width: 60% !important;
+    margin: 0 auto !important;
+}
+
+.modal-galeria {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .cerrar-modal {
