@@ -372,6 +372,7 @@ header {
 h1 {
     margin: 1.5rem 0 0 1rem;
     color: var(--secondary-color);
+    margin-left: 5%;
 }
 
 .main > :nth-child(1) {
@@ -379,7 +380,7 @@ h1 {
 }
 
 .foto-perfil {
-    width: 75vw;
+    width: 90vw;
     border: 1px solid #333;
     margin: 0 auto;
     margin-top: 3rem;
@@ -406,8 +407,9 @@ h1 {
     background-color: var(--secondary-color);
     color: #e9e9e9;
     border: 1px solid var(--secondary-color);
-    border-radius: 40px;
-    padding: 10px 10px 10px 20px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: 250px;
     font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
@@ -482,7 +484,6 @@ a {
     position: relative;
     display: flex;
     align-items: flex-end;
-    display: none;
 }
 /* 
 .meta {
@@ -573,7 +574,7 @@ a {
 h2 {
     margin-left: 5%;
     font-weight: bolder;
-    font-size: 2.5rem;
+    font-size: 3rem;
     text-transform: uppercase;
     color: var(--secondary-color);
 }
@@ -599,11 +600,15 @@ h2 {
 }
 
 .titulo-proyecto {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bolder;
     margin: 1rem 0;
     color: var(--secondary-color);
     position: relative;
+}
+
+.titulo-proyecto {
+    padding-right: 10%;
 }
 
 .link {
@@ -619,6 +624,7 @@ h2 {
 
 .link img {
     height: 100%;
+    max-height: 50px;
 }
 
 .imagen-proy {
@@ -651,7 +657,7 @@ h2 {
     border: 1px solid var(--secondary-color);
     border-radius: 5px;
     padding: 10px 20px;
-    width: 150px;
+    width: 100%;
     font-size: 1rem;
     font-weight: bolder;
     cursor: pointer;
@@ -663,6 +669,25 @@ h2 {
 }
 
 /*==========MODAL PROYECTOS=========*/
+
+h5 {
+    font-size: 1rem;
+    font-weight: bolder;
+    margin: 0.5rem 0;
+    color: var(--secondary-color);
+}
+
+h5 span {
+    font-weight: normal;
+    margin-left: 0.5rem;
+}
+
+.mod-des {
+    margin: 1rem 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--secondary-color);
+}
 
 .modal-detalles {
     position: fixed;
@@ -1077,11 +1102,17 @@ footer p:nth-child(3) {
 
     h1 {
         position: absolute;
+        top: 2rem;
+        left: 3rem;
         font-size: 8rem;
     }
 
+    h2 {
+        font-size: 5rem;
+    }
+
     .burger {
-        z-index: 1100;
+        z-index: 1000;
     }
 
     .burger-activo {
@@ -1141,17 +1172,6 @@ footer p:nth-child(3) {
         margin-left: 15%;
     }
 
-    .proyecto {
-        flex-direction: row;
-        gap: 2rem;
-    }
-
-    .imagen-proy {
-        width: 50%;
-        margin: 0;
-        margin-top: 1rem;
-    }
-
     .main > :nth-child(1) {
         order: 0;
     }
@@ -1167,7 +1187,7 @@ footer p:nth-child(3) {
     }
 
     .presentacion {
-        width: 20%;
+        width: 30%;
         text-align: left;
     }
 
@@ -1179,7 +1199,61 @@ footer p:nth-child(3) {
 
     .tec {
         height: 100px;
-        
+    }
+
+     .proyecto {
+        display: flex;
+        padding: 0 5%;
+        height: 270px;    
+    }
+
+    .imagen-proy {
+        width: 40%;
+        max-height: 100%;
+        max-width: max-content;
+        margin: 0;
+        margin-top: 1rem;
+        position: absolute;
+        right: 15%;
+    }
+
+    .titulo-proyecto {
+        font-size: 3rem;
+        order: -1;
+        line-height: 1;
+}
+
+    .link {
+        height: 50px;
+    }
+    .ver-mas {
+        font-size: 1.2rem;
+        width: 200px;
+        margin: 0;
+        margin-top: auto;
+    }
+}
+
+
+@media (min-width: 1280px) {
+
+    .main {
+        padding-right: 0;
+    }
+    
+    h1 {
+        font-size: 6rem;
+        margin-left: 5%;
+        top: 0;
+    }
+
+    .foto-perfil {
+        width: 28vw;
+        margin-left: 0%;
+    }
+
+    .presentacion {
+        width: 45%;
     }
 
 }
@@ -1187,11 +1261,20 @@ footer p:nth-child(3) {
 
 @media (min-width: 1440px) {
 
+    h1 {
+        font-size: 6rem;
+        top: 4rem;
+    }
+
     .foto-perfil {
         width: 30vw;
     }
 
     .nav a {
         font-size: 4rem;
+    }
+
+    .presentacion {
+        width: 35%;
     }
 }

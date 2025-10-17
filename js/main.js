@@ -49,6 +49,7 @@ blur.addEventListener('click',()=>{
         burger.classList.remove('burger-activo');
         modal.forEach(modal => modal.classList.remove('modal-activo'));
         posicion_blur();
+        burger.style.zIndex = '1000';
         scroll_off();
     }
 });
@@ -66,6 +67,7 @@ verMas.forEach((btn, index) => {
         modales[index].classList.add("modal-activo");
         blur.classList.add('blur-activo');
         posicion_blur();
+        burger.style.zIndex = '100';
         scroll_off();
     });
 });
@@ -77,9 +79,10 @@ closeModal.forEach((btn, index) => {
         blur.classList.remove('blur-activo');
         posicion_blur();
         scroll_off();
+        burger.style.zIndex = '1000';
     });
 });
-
+  
 //--------Formulario de contacto//
 
 const campos = [
