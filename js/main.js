@@ -64,12 +64,7 @@ blur.addEventListener('click',()=>{
     }
 });
 
-
-//--------Activacion del modal y blur//
-
-
 let modales = document.querySelectorAll(".modal-detalles");
- // si tienes un fondo desenfocado
 
 // Abrir modal
 verMas.forEach((btn, index) => {
@@ -93,8 +88,6 @@ closeModal.forEach((btn, index) => {
     });
 });
   
-//--------Formulario de contacto//
-
 const campos = [
   document.getElementById('nombre'),
   document.getElementById('email'),
@@ -105,7 +98,6 @@ const estados = document.querySelectorAll('.estado-form .estado');
 const enviarBtn = document.querySelector('.btn-enviar');
 const form = document.querySelector('.form-contacto');
 
-// crea dinámicamente los elementos de confirmación (si no existen)
 let confir1 = document.querySelector('.confirmacion1');
 let confir2 = document.querySelector('.confirmacion2');
 
@@ -115,7 +107,6 @@ function verificarCampos() {
   enviarBtn.style.animation = todosLlenos ? 'enviarForm 3s infinite' : 'none';
 }
 
-// manejar blur (cuando pierde el foco)
 campos.forEach((campo, index) => {
   campo.addEventListener('blur', () => {
     if (campo.value.trim() !== '') {
@@ -138,22 +129,44 @@ document.querySelectorAll('.estado').forEach(estado => {
   });
 });
 
-// al enviar el formulario, activar animaciones
 form.addEventListener('submit', e => {
   e.preventDefault(); // evita recargar la página
 
   // quitar animaciones si ya se habían usado antes
   confir1.style.animation = 'none';
   confir2.style.animation = 'none';
-  void confir1.offsetWidth; // “reflow” para reiniciar animación
+  void confir1.offsetWidth;
   void confir2.offsetWidth;
 
   // activar animaciones
   confir1.style.animation = 'confir1 10s forwards';
   confir2.style.animation = 'confir2 10s forwards';
 
-  // opcional: limpiar campos y desactivar botón animado
   form.reset();
   verificarCampos();
 });
 
+const doom = document.querySelector(".doom");
+
+const preferenciaGuardada = localStorage.getItem('modo');
+const sistemaOscuro = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if (preferenciaGuardada === 'oscuro' || (!preferenciaGuardada && sistemaOscuro)) {
+  document.body.classList.add('modo-osc');
+}
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+  if (!localStorage.getItem('modo')) {
+    if (e.matches) {
+      document.body.classList.add('modo-osc');
+    } else {
+      document.body.classList.remove('modo-osc');
+    }
+  }
+});
+
+doom.addEventListener("click", () => {
+  document.body.classList.toggle("modo-osc");
+  const modo = document.body.classList.contains("modo-osc") ? "oscuro" : "claro";
+  localStorage.setItem("modo", modo);
+});

@@ -1,0 +1,67 @@
+@media(prefers-color-scheme: dark) {
+    .modo-osc {
+        /* background-color: rgb(45,45,45); */
+        background-color: #0a2239;
+    }
+
+    .modo-osc h1, .modo-osc .presentacion p, .modo-osc .tec-info, h2, 
+    .titulo-proyecto, .contacto h2, .fecha, h5, .mod-des, .modo-osc 
+    .ver-mas, .modo-osc .confirmacion {
+        color: #d3d3d3;
+    }
+
+    .modo-osc .burger, .modo-osc .barra, .modal-detalles .close-modal, .modo-osc .ver-mas, .modo-osc .estado-activo{
+        border: 1px solid #d3d3d3;
+    }
+
+    .modo-osc .line1, .modo-osc .burger .line2, 
+    .modo-osc .burger .line3, .progreso, .linea-ancha, 
+    .modal-detalles .close_button .line1, .modal-detalles 
+    .close_button .line2, .modo-osc .estado div {
+        background-color: #d3d3d3;
+    }
+
+    .modo-osc .modal-detalles, .modo-osc .modal-close-area {
+        background-color: #0a2239;
+    }
+
+    .modo-osc .tec-info img, .modo-osc .link, .btn-enviar img {
+        filter: brightness(0) invert(1);
+    }
+
+    .modo-osc .form-contacto input, .modo-osc .form-contacto textarea {
+        border-bottom: #d3d3d3 solid 1px;
+        color: #d3d3d3;
+    }
+
+    .modo-osc footer, .modo-osc .menu-footer a, .modo-osc .titulo-footer {
+        background-color: #d3d3d3;
+        color: #0a2239;
+    }
+
+    .modo-osc .icon-scroll::before {
+        background: #d3d3d3;
+    }
+
+    .modo-osc .icon-scroll {
+        box-shadow: inset 0 0 0 1px #d3d3d3;
+    }
+
+    .modo-osc .redes-sociales a img {
+        filter: invert(100%) brightness(0%);
+    }
+
+    .modo-osc .loader {
+    transform: scale(4);
+  width: 100%;
+  height: 12px;
+  --c:var(--primary-color) 50%,#0a2239 0;
+  background: 
+    linear-gradient(90deg ,var(--c)) 0 0%,
+    linear-gradient(-90deg,var(--c)) 0 50%,
+    linear-gradient(90deg ,var(--c)) 0 100%;
+  background-size: 8px calc(100%/3);
+  background-repeat: repeat-x;
+  animation: l8 2s infinite linear;
+}
+}
