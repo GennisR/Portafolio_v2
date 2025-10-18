@@ -668,7 +668,16 @@ h2 {
     margin: 1rem auto 0 auto;
 }
 
+.ver-mas:hover {
+    background-color: var(--secondary-color);
+    color: #e9e9e9;
+}
+
 /*==========MODAL PROYECTOS=========*/
+
+.icon-scroll {
+    display: none;
+}
 
 h5 {
     font-size: 1rem;
@@ -740,8 +749,8 @@ h5 span {
     max-width: 500px;
     width: 90%;
     position: relative;
-    max-height: 500px; /* o cualquier altura deseada */
-    overflow-y: auto;  /* activa el scroll vertical */
+    max-height: 500px;
+    overflow-y: auto;  
     padding: 1rem;
 }
 
@@ -1232,6 +1241,8 @@ footer p:nth-child(3) {
         margin: 0;
         margin-top: auto;
     }
+
+
 }
 
 
@@ -1256,6 +1267,89 @@ footer p:nth-child(3) {
         width: 45%;
     }
 
+        .modal-contenido {
+        width: auto;
+        max-width: 50%;
+        margin-right: 10%;
+        overflow: auto;
+        display: flex;
+
+    }
+
+    .modal-detalles {
+        height: 80vh;
+        align-items: end;
+    }
+
+    .mod-txt {
+        position: fixed;
+        left: 3rem;
+        width: 25%;
+    }
+
+    .modal-contenido .modal-galeria {
+        width: 100%;
+        
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .modal-contenido .modal-galeria img {
+        height: 300px;
+        width: auto;
+        margin-right: 1%;
+    }
+
+    .icon-scroll {
+  position: absolute;
+    right: 5%;
+}
+
+    .icon-scroll::before {
+  position: absolute;
+  left: 50%;
+}
+
+.icon-scroll {
+    display: block;
+    width: 40px;
+    height: 70px;
+    margin-left: -20px;
+    top: 50%;
+    margin-top: -35px;
+    box-shadow: inset 0 0 0 1px var(--secondary-color);
+    border-radius: 25px;
+}
+
+.icon-scroll::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--secondary-color);
+  margin-left: -4px;
+  top: 8px;
+  border-radius: 4px;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: scroll;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+    transform: translateY(46px);
+  }
+
+    100% {
+        opacity: 0;
+        transform: translateY(46px);
+}
+
+
+}
 }
 
 

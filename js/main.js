@@ -95,7 +95,7 @@ const estados = document.querySelectorAll('.estado-form .estado');
 const enviarBtn = document.querySelector('.btn-enviar');
 const form = document.querySelector('.form-contacto');
 
-// ✅ crea dinámicamente los elementos de confirmación (si no existen)
+// crea dinámicamente los elementos de confirmación (si no existen)
 let confir1 = document.querySelector('.confirmacion1');
 let confir2 = document.querySelector('.confirmacion2');
 
