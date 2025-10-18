@@ -1,0 +1,52 @@
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100dvh;
+}
+
+.cont-fotos {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+}
+
+.fotos {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    align-content: center;
+    position: fixed;
+}
+
+.fotos .foto {
+    width: 100%;
+    height: fit-content;
+    transition: transform 0.3s;
+}
+
+.fotos a {
+    width: 10%;
+    height: auto;
+}
+
+.fotos .foto:hover {
+    transform: scale(1.05);
+}
+
+.amplia {
+    position: relative;
+
+    width: 50%;
+}
+
+.amplia img {
+    max-width: 80%;
+    padding: 10vh 0;
+}

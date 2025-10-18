@@ -5,6 +5,16 @@ let closeMenu = document.querySelector(".close-menu");
 let closeModal = document.querySelectorAll(".close-modal");
 let modal = document.querySelectorAll(".modal-detalles");
 let verMas = document.querySelectorAll(".ver-mas");
+let enlacesNav = document.querySelectorAll('.nav_menu a');
+
+// Cerrar menú al hacer clic en un enlace de navegación
+enlacesNav.forEach(enlace => {
+    enlace.addEventListener('click', () => {
+        btn_menu();
+        posicion_blur();
+        scroll_off();
+    });
+});
 
 function btn_menu() {
     burger.classList.toggle('burger-activo');

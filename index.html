@@ -7,8 +7,6 @@
     <meta name="keywords" content="Gennis, Gnnis, portafolio web, desarrollo web, diseño UX/UI, proyectos web, frontend, HTML, CSS, JavaScript, Costa Rica">
     <meta name="author" content="Gennis R.">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#000000">
-
     <!-- Metadatos para redes sociales (Open Graph / Facebook / LinkedIn) -->
     <meta property="og:title" content="Gennis R. | Portafolio Personal">
     <meta property="og:description" content="Descubre los proyectos, habilidades y trabajos de Gennis R., diseñador UX/UI y desarrollador web.">
@@ -25,10 +23,10 @@
         <div class="blur"></div>
         <nav class="nav">
             <div class="nav_menu">
-                <a  href="index.html">[INDEX]</a>
-                <a  href="#">[PROYECTOS]</a>
-                <a  href="#">[FOTOS]</a>
-                <a  href="#">[CONTACTO]</a>
+                <a  href="index.html"><span>[</span>INDEX<span>]</span></a>
+                <a  href="#proyectos"><span>[</span>PROYECTOS<span>]</span></a>
+                <a  href="#contacto"><span>[</span>CONTACTO<span>]</span></a>
+                <a  href="galeria.html"><span>[</span>GALERIA<span>]</span></a>
             </div>
             
             <div class="menu_items">
@@ -66,7 +64,7 @@
             <p>
                 Además del código, disfruto la fotografía como una forma de observar el mundo con detalle y composición.
             </p>
-            <a href="#">
+            <a href="#contacto">
                 <button class="btn-inicio">CONTACTAME
                     <div class="circulo-btn">
                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nO3aMQoCYQwF4blElvX+N7ERXCstPI4i/JW98BLnu8FAmpCApF85Azdgo7kr8AIe3WMKuK+YJ3CisTImVBkTqowJVcaEMiaVMamMSWVMqlEx21qXPzEHjY0Iqa/R2mnIiBRGpDAihREpjEhhRAojUpQRIWpCBGstHXGevkx5GJD+wRvo/nQfavndiwAAAABJRU5ErkJggg==" alt="forward--v1">
@@ -75,7 +73,9 @@
             </a>
         </section>
         <section class="foto-perfil">
-            <img src="img/profile web.webp" alt="">
+            <img class="perfil1" src="img/profile1.png" alt="foto1">
+            <img class="perfil2" src="img/profile2.png" alt="foto2">
+            <img class="perfil3" src="img/profile3.png" alt="foto3">
         </section>
         <section class="tecnologias">
             <div class="tec">
@@ -116,7 +116,7 @@
             </div>
         </section>
     </main>
-    <section class="proyectos">
+    <section id="proyectos" class="proyectos">
         <div class="linea-ancha"></div>
         <h2>Proyectos</h2>
         <div class="linea-ancha"></div>
@@ -238,11 +238,11 @@
         </div>
         <div class="linea-ancha"></div>
     </section>
-    <section class="contacto">
+    <section id="contacto" class="contacto">
         <h2>CONTACTAME</h2>
         <div class="linea-ancha"></div>
         <span class="confirmacion confirmacion1">ENVIADO!!</span>
-        <form class="form-contacto">
+        <form class="form-contacto" action="https://formsubmit.co/gennismac@gmail.com" method="POST">
             <label for="nombre">Nombre</label>
             <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
             <label for="email">Email</label>
@@ -280,15 +280,15 @@
         <div class="loader"></div>
         <p class="titulo-footer">Gnnis</p>
         <div class="menu-footer">
-            <a href="index.html">[INDEX]</a>
-            <a href="#">[PROYECTOS]</a>
-            <a href="#">[FOTOS]</a>
-            <a href="#">[CONTACTO]</a>
+            <a href="index.html"><span>[</span>INDEX<span>]</span></a>
+            <a href="#proyectos"><span>[</span>PROYECTOS<span></span>]</span></a>
+            <a href="galeria.html"><span>[</span>FOTOS<span>]</span></a>
+            <a href="#contacto"><span>[</span>CONTACTO<span>]</span></a>
         </div>
         <p class="copyright">&copy; 2025 Gnnis.</p>
         <div class="redes-sociales">
-            <a href="#"><img src="img/whatsapp.svg" alt="whatsapp"></a>
-            <a href="#"><img src="img/instagram.svg" alt="Instagram"></a>
+            <a target="_blank" href="https://wa.me/+50661920922"><img src="img/whatsapp.svg" alt="whatsapp"></a>
+            <a target="_blank" href="https://www.instagram.com/gnnis_/"><img src="img/instagram.svg" alt="Instagram"></a>
         </div>
     </footer>
     <script src="js/main.js"></script>
