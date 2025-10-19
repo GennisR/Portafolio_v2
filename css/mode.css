@@ -4,19 +4,19 @@
         background-color: #0a2239;
     }
 
-    .modo-osc h1, .modo-osc .presentacion p, .modo-osc .tec-info, h2, 
-    .titulo-proyecto, .contacto h2, .fecha, h5, .mod-des, .modo-osc 
+    .modo-osc h1, .modo-osc .presentacion p, .modo-osc .tec-info,.modo-osc h2, 
+    .modo-osc .titulo-proyecto,.modo-osc .contacto h2,.modo-osc .fecha,.modo-osc h5,.modo-osc .mod-des, .modo-osc 
     .ver-mas, .modo-osc .confirmacion {
         color: #d3d3d3;
     }
 
-    .modo-osc .burger, .modo-osc .barra, .modal-detalles .close-modal, .modo-osc .ver-mas, .modo-osc .estado-activo{
+    .modo-osc .burger, .modo-osc .barra,.modo-osc .modal-detalles .close-modal, .modo-osc .ver-mas, .modo-osc .estado-activo, .modo-osc .btn-inicio{
         border: 1px solid #d3d3d3;
     }
 
     .modo-osc .line1, .modo-osc .burger .line2, 
-    .modo-osc .burger .line3, .progreso, .linea-ancha, 
-    .modal-detalles .close_button .line1, .modal-detalles 
+    .modo-osc .burger .line3, .modo-osc .progreso, .modo-osc .linea-ancha, 
+    .modo-osc .modal-detalles .close_button .line1,.modo-osc .modal-detalles 
     .close_button .line2, .modo-osc .estado div {
         background-color: #d3d3d3;
     }
@@ -25,7 +25,7 @@
         background-color: #0a2239;
     }
 
-    .modo-osc .tec-info img, .modo-osc .link, .btn-enviar img {
+    .modo-osc .tec-info img, .modo-osc .link,.modo-osc .btn-enviar img {
         filter: brightness(0) invert(1);
     }
 

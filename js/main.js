@@ -147,20 +147,28 @@ form.addEventListener('submit', e => {
 });
 
 const doom = document.querySelector(".doom");
+let sun = document.querySelector(".sun");
+let moon = document.querySelector(".moon");
 
 const preferenciaGuardada = localStorage.getItem('modo');
 const sistemaOscuro = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 if (preferenciaGuardada === 'oscuro' || (!preferenciaGuardada && sistemaOscuro)) {
   document.body.classList.add('modo-osc');
+  sun.classList.add("sun-a");
+  moon.classList.remove("moon-a")
 }
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
   if (!localStorage.getItem('modo')) {
     if (e.matches) {
       document.body.classList.add('modo-osc');
+      moon.classList.remove("moon-a");
+      sun.classList.add("sun-a");
     } else {
       document.body.classList.remove('modo-osc');
+      moon.classList.add("moon-a");
+      sun.classList.remove("sun-a");
     }
   }
 });
@@ -168,5 +176,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
 doom.addEventListener("click", () => {
   document.body.classList.toggle("modo-osc");
   const modo = document.body.classList.contains("modo-osc") ? "oscuro" : "claro";
+  modo == "oscuro" ? moon.classList.remove("moon-a") :  moon.classList.add("moon-a");
+  modo == "oscuro" ? sun.classList.add("sun-a") :  sun.classList.remove("sun-a");
   localStorage.setItem("modo", modo);
 });

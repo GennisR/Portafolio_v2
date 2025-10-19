@@ -113,7 +113,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1rem;
+    padding: 1rem;
 }
 
 .nav-activo {
@@ -195,6 +195,7 @@ header {
     width: 3rem;
     height: 3rem;
     display: flex;
+    background-color: transparent;
     flex-direction: column;
     justify-content: space-around;
     cursor: pointer;
@@ -221,6 +222,7 @@ header {
     padding: 0.5rem;
     transition: all 1s ease;
     animation: girar 8s infinite;
+    background-color: transparent;
 }
 
 .close_button .line1 {
@@ -277,15 +279,61 @@ header {
 /*========diamante==========*/
 
 .doom {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1px;
     max-width: 55px;
-    transform: scale(0.8);
+    width: 50px;
+    cursor: pointer;
 }
 
+.doom img {
+    position: absolute;
+    width: 40px;
+    height: auto;
+}
+
+.sun {
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.sun-a {
+    opacity: 1;
+    animation: bounceIn .3s linear forwards;
+}
+
+.moon {
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.moon-a {
+    opacity: 1;
+    animation: bounceIn .3s linear forwards;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 
 .fila {
   display: flex;
     justify-content: center;
@@ -316,7 +364,7 @@ header {
 .diamante1 {
     transform: translate(-.3px, 9px) rotate(45deg);
 }
-
+ */
 @keyframes parpadear {
   0% {
     opacity: 1;

@@ -1,297 +1,526 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio personal de Gennis R. — Diseñador UX/UI y Desarrollador Web. Explora proyectos, tecnologías y formas de contacto.">
-    <meta name="keywords" content="Gennis, Gnnis, portafolio web, desarrollo web, diseño UX/UI, proyectos web, frontend, HTML, CSS, JavaScript, Costa Rica">
-    <meta name="author" content="Gennis R.">
-    <meta name="robots" content="index, follow">
-    <!-- Metadatos para redes sociales (Open Graph / Facebook / LinkedIn) -->
-    <meta property="og:title" content="Gennis R. | Portafolio Personal">
-    <meta property="og:description" content="Descubre los proyectos, habilidades y trabajos de Gennis R., diseñador UX/UI y desarrollador web.">
-    <!-- <meta property="og:image" content="https://tusitio.com/img/preview.jpg">
-    <meta property="og:url" content="https://tusitio.com"> -->
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="es_ES">
-    <title>Gennis R. | Portafolio Web y Diseño UX/UI</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio personal de Gennis R. — Diseñador UX/UI y Desarrollador Web. Explora proyectos, tecnologías y formas de contacto.">
+  <meta name="keywords" content="Gennis, Gnnis, portafolio web, desarrollo web, diseño UX/UI, proyectos web, frontend, HTML, CSS, JavaScript, Costa Rica">
+  <meta name="author" content="Gennis R.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Gennis R. | Portafolio Personal">
+  <meta property="og:description" content="Descubre los proyectos, habilidades y trabajos de Gennis R., diseñador UX/UI y desarrollador web.">
+  <meta property="og:image" content="https://gnnis.com/img/preview.webp">
+  <meta property="og:url" content="https://gnnis.com">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+
+  <title>Gennis R. | Portafolio Web y Diseño UX/UI</title>
+
+  <!-- Preload CSS principal para mejorar el LCP -->
+  <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="css/mode.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mode.css">
+  </noscript>
+
+  <!-- Preconexión a recursos externos (mejora la latencia inicial) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Opcional: carga de fuentes optimizada (si usas Google Fonts) -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'"> -->
+
+  <!-- Favicon optimizado -->
+  <link rel="icon" href="img/icon.png" type="image/webp">
+
+  <!-- Caching para navegadores -->
+  <meta http-equiv="Cache-Control" content="max-age=31536000, immutable">
 </head>
 <body>
     <header>
-        <div class="logo"></div>
-        <div class="blur"></div>
-        <nav class="nav">
-            <div class="nav_menu">
-                <a  href="index.html"><span>[</span>INDEX<span>]</span></a>
-                <a  href="#proyectos"><span>[</span>PROYECTOS<span>]</span></a>
-                <a  href="#contacto"><span>[</span>CONTACTO<span>]</span></a>
-                <a  href="galeria.html"><span>[</span>GALERIA<span>]</span></a>
-            </div>
-            
-            <div class="menu_items">
-                <div class="doom">
-                    <div class="diamante diamante1"></div>
-                    <div class="fila">
-                        <div class="diamante"></div>
-                        <div class="diamante"></div>
-                    </div>
-                    <div class="diamante"></div>
-                </div>
-                <div class="close_button close-menu">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                </div>
-                <div class="redes">
-                    <a href="#"><img src="img/whatsapp.svg" alt="whatsapp"></a>
-                    <a href="#"><img src="img/instagram.svg" alt="Instagram"></a>
-                </div>
-            </div>
-        </nav>
-        <div class="burger">
-            <div class="line1 line1-activa"></div>
-            <div class="line2 line2-activa"></div>
-            <div class="line3 line3-activa"></div>
+  <div class="logo" aria-label="Logo de Gennis R."></div>
+  <div class="blur" aria-hidden="true"></div>
+
+  <nav class="nav" aria-label="Navegación principal">
+    <div class="nav_menu">
+      <a href="index.html"><span>[</span>INDEX<span>]</span></a>
+      <a href="#proyectos"><span>[</span>PROYECTOS<span>]</span></a>
+      <a href="#contacto"><span>[</span>CONTACTO<span>]</span></a>
+      <a href="galeria.html"><span>[</span>GALERIA<span>]</span></a>
+    </div>
+
+    <div class="menu_items">
+      <div class="doom" aria-label="Botón de modo oscuro">
+        <img class="sun" src="img/sun.svg" alt="Modo claro" loading="lazy" decoding="async">
+        <img class="moon moon-a" src="img/moon1.svg" alt="Modo oscuro" loading="lazy" decoding="async">
+      </div>
+
+      <button class="close_button close-menu" aria-label="Cerrar menú">
+        <div class="line1"></div>
+        <div class="line2"></div>
+      </button>
+
+      <div class="redes" aria-label="Redes sociales">
+        <a target="_blank" rel="noopener noreferrer" href="https://wa.me/+50661920922">
+          <img src="img/whatsapp.svg" alt="WhatsApp" loading="lazy" decoding="async">
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/gnnis_/">
+          <img src="img/instagram.svg" alt="Instagram" loading="lazy" decoding="async">
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <button class="burger" aria-label="Abrir menú">
+    <div class="line1 line1-activa"></div>
+    <div class="line2 line2-activa"></div>
+    <div class="line3 line3-activa"></div>
+  </button>
+</header>
+
+<h1 class="titulo-principal">Gennis R.</h1>
+
+<main class="main">
+
+  <section class="presentacion">
+    <p>
+      Soy Gennis, desarrollador web enfocado en crear interfaces limpias, animadas y responsivas. Mi objetivo es crecer como desarrollador y tomo cada proyecto como una oportunidad para aprender, experimentar y refinar mis habilidades.
+    </p>
+    <p>
+      Además del código, disfruto la fotografía como una forma de observar el mundo con detalle y composición.
+    </p>
+    <a href="#contacto" class="btn-link">
+      <button class="btn-inicio" type="button" aria-label="Ir a la sección de contacto">
+        CONTACTAME
+        <div class="circulo-btn">
+          <img 
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nO3aMQoCYQwF4blElvX+N7ERXCstPI4i/JW98BLnu8FAmpCApF85Azdgo7kr8AIe3WMKuK+YJ3CisTImVBkTqowJVcaEMiaVMamMSWVMqlEx21qXPzEHjY0Iqa/R2mnIiBRGpDAihREpjEhhRAojUpQRIWpCBGstHXGevkx5GJD+wRvo/nQfavndiwAAAABJRU5ErkJggg==" 
+            alt="Flecha de contacto" 
+            width="32" height="32" 
+            decoding="async">
         </div>
-    </header>
-    <h1>Gennis R.</h1>
-    <main class="main">
-        
-        <section class="presentacion">        
-            <p>
-                Soy Gennis, desarrollador web enfocado en crear interfaces limpias, animadas y responsivas. Mi objetivo es crecer como desarrollador y tomo cada proyecto como una oportunidad para aprender, experimentar y refinar mis habilidades.
-            </p>
-            <p>
-                Además del código, disfruto la fotografía como una forma de observar el mundo con detalle y composición.
-            </p>
-            <a href="#contacto">
-                <button class="btn-inicio">CONTACTAME
-                    <div class="circulo-btn">
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nO3aMQoCYQwF4blElvX+N7ERXCstPI4i/JW98BLnu8FAmpCApF85Azdgo7kr8AIe3WMKuK+YJ3CisTImVBkTqowJVcaEMiaVMamMSWVMqlEx21qXPzEHjY0Iqa/R2mnIiBRGpDAihREpjEhhRAojUpQRIWpCBGstHXGevkx5GJD+wRvo/nQfavndiwAAAABJRU5ErkJggg==" alt="forward--v1">
-                    </div>
-                </button>
-            </a>
-        </section>
-        <section class="foto-perfil">
-            <img class="perfil1" src="img/profile1.png" alt="foto1">
-            <img class="perfil2" src="img/profile2.png" alt="foto2">
-            <img class="perfil3" src="img/profile3.png" alt="foto3">
-        </section>
-        <section class="tecnologias">
-            <div class="tec">
-                <div class="tec-info">
-                    <img src="img/html-5.svg" alt="logo html">
-                    <p>[HTML]</p>
-                </div>
-                <div class="barra">
-                    <div class="progreso"></div>
-                </div>
-            </div>
-            <div class="tec">
-                <div class="tec-info">
-                    <img src="img/css3.svg" alt="logo css">
-                    <p>[CSS]</p>
-                </div>
-                <div class="barra">
-                    <div class="progreso"></div>
-                </div>
-            </div>
-            <div class="tec">
-                <div class="tec-info">
-                    <img src="img/javascript.svg" alt="logo javascript">
-                    <p>[JS]</p>
-                </div>
-                <div class="barra">
-                    <div class="progreso"></div>
-                </div>
-            </div>
-            <div class="tec">
-                <div class="tec-info">
-                    <img src="img/github.svg" alt="logo github">
-                    <p>[GIT]</p>
-                </div>
-                <div class="barra">
-                    <div class="progreso"></div>
-                </div>
-            </div>
-        </section>
-    </main>
+      </button>
+    </a>
+  </section>
+
+  <section class="foto-perfil" aria-label="Fotografías del perfil de Gennis">
+    <img class="perfil1" src="img/profile1.png" alt="Foto de Gennis 1" loading="lazy" decoding="async">
+    <img class="perfil3" src="img/profile3.png" alt="Foto de Gennis 3" loading="lazy" decoding="async">
+  </section>
+
+  <section class="tecnologias" aria-label="Tecnologías dominadas">
+    <div class="tec">
+      <div class="tec-info">
+        <img src="img/html-5.svg" alt="Logo de HTML" width="40" height="40" loading="lazy" decoding="async">
+        <p>[HTML]</p>
+      </div>
+      <div class="barra"><div class="progreso"></div></div>
+    </div>
+
+    <div class="tec">
+      <div class="tec-info">
+        <img src="img/css3.svg" alt="Logo de CSS" width="40" height="40" loading="lazy" decoding="async">
+        <p>[CSS]</p>
+      </div>
+      <div class="barra"><div class="progreso"></div></div>
+    </div>
+
+    <div class="tec">
+      <div class="tec-info">
+        <img src="img/javascript.svg" alt="Logo de JavaScript" width="40" height="40" loading="lazy" decoding="async">
+        <p>[JS]</p>
+      </div>
+      <div class="barra"><div class="progreso"></div></div>
+    </div>
+
+    <div class="tec">
+      <div class="tec-info">
+        <img src="img/github.svg" alt="Logo de GitHub" width="40" height="40" loading="lazy" decoding="async">
+        <p>[GIT]</p>
+      </div>
+      <div class="barra"><div class="progreso"></div></div>
+    </div>
+  </section>
+
+</main>
+
     <section id="proyectos" class="proyectos">
         <div class="linea-ancha"></div>
         <h2>Proyectos</h2>
         <div class="linea-ancha"></div>
         <div class="proyecto">
-            <p class="fecha">16 de octubre de 2025</p>
-             <img class="imagen-proy" src="img/p-3-2.webp" alt="pagina Municipalidad Alajuelita">
-            <h3 class="titulo-proyecto">Municipalidad Alajuelita<a href="https://gestioncultural-alajuelita.netlify.app/" class="link"><img src="img/up-right.png" alt="icono enlace"></a></h3>
-            <button class="ver-mas">Ver</button>
-            <section class="modal-detalles">
-                <h3 class="titulo-proyecto">PROYECTO MUNICIPALIDAD ALAJUELITA<a href="https://gestioncultural-alajuelita.netlify.app/" class="link"><img src="img/up-right.png" alt="icono enlace"></a></h3>
-                <div class="modal-contenido">
-                    <div class="mod-txt">
-                    <h5>CATEGORÍA <span>Diseño UX/UI - Desarrollo Web</span></h5>
-                    <h5>AÑO <span>2025</span></h5>
-                    <h5>CLIENTE <span>Municipalidad Alajuelita</span></h5>
-                    <h5>EQUIPO <span>Desarrolladores INA 2025</span></h5>
-                    <p class="mod-des">La plataforma de Gestión Cultural de Alajuelita es un sitio web 
-                        institucional que promueve la identidad y 
-                        participación cultural del cantón. Con diseño responsivo y 
-                        secciones dinámicas, facilita el acceso a eventos, historia 
-                        local y espacios de expresión ciudadana.</p>
-                    </div>
-                        <div class="modal-galeria">
-                            <img src="img/p-3-1.webp" alt="pagina Municipalidad Alajuelita">
-                            <img src="img/p-3-2.webp" alt="pagina Municipalidad Alajuelita">
-                            <img src="img/p-3-3.webp" alt="pagina Municipalidad Alajuelita">
-                            <img src="img/p-3-4.webp" alt="pagina Municipalidad Alajuelita">
-                            <img src="img/p-3-5.webp" alt="pagina Municipalidad Alajuelita">
-                            <img src="img/p-3-6.webp" alt="pagina Municipalidad Alajuelita">
-                        </div>
-                </div>
-                <div class='icon-scroll'></div>
-                <div class="modal-close-area">
-                    <div class="close_button close-modal">
-                        <div class="line1"></div>
-                        <div class="line2"></div>
-                    </div>
-                </div>
-            </section>
-        </div>
+  <p class="fecha">16 de octubre de 2025</p>
+
+  <img 
+    class="imagen-proy"
+    src="img/p-3-2.webp"
+    alt="Captura del sitio web de la Municipalidad de Alajuelita"
+    loading="lazy"
+    decoding="async"
+  >
+
+  <h3 class="titulo-proyecto">
+    Municipalidad Alajuelita
+    <a 
+      href="https://gestioncultural-alajuelita.netlify.app/" 
+      class="link" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      aria-label="Abrir sitio Municipalidad Alajuelita en una nueva pestaña"
+    >
+      <img 
+        src="img/up-right.png" 
+        alt="flecha de link" 
+        loading="lazy"
+        decoding="async"
+      >
+    </a>
+  </h3>
+
+  <button class="ver-mas" type="button" aria-haspopup="dialog" aria-controls="modal-alajuelita">
+    Ver
+  </button>
+
+  <section 
+    id="modal-alajuelita"
+    class="modal-detalles" 
+    role="dialog" 
+    aria-labelledby="titulo-alajuelita" 
+    aria-modal="true"
+    hidden
+  >
+    <h3 id="titulo-alajuelita" class="titulo-proyecto">
+      PROYECTO MUNICIPALIDAD ALAJUELITA
+      <a 
+        href="https://gestioncultural-alajuelita.netlify.app/" 
+        class="link" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        aria-label="Abrir sitio Municipalidad Alajuelita en nueva pestaña"
+      >
+        <img 
+          src="img/up-right.png" 
+          alt="flecha de link" 
+          loading="lazy"
+          decoding="async"
+        >
+      </a>
+    </h3>
+
+    <div class="modal-contenido">
+      <div class="mod-txt">
+        <h5>CATEGORÍA <span>Diseño UX/UI - Desarrollo Web</span></h5>
+        <h5>AÑO <span>2025</span></h5>
+        <h5>CLIENTE <span>Municipalidad Alajuelita</span></h5>
+        <h5>EQUIPO <span>Desarrolladores INA 2025</span></h5>
+        <p class="mod-des">
+          La plataforma de Gestión Cultural de Alajuelita es un sitio web institucional que promueve la identidad y participación cultural del cantón. Con diseño responsivo y secciones dinámicas, facilita el acceso a eventos, historia local y espacios de expresión ciudadana.
+        </p>
+      </div>
+
+      <div class="modal-galeria">
+        <img src="img/p-3-1.webp" alt="Captura del sitio web Municipalidad de Alajuelita 1"  loading="lazy" decoding="async">
+        <img src="img/p-3-2.webp" alt="Captura del sitio web Municipalidad de Alajuelita 2"  loading="lazy" decoding="async">
+        <img src="img/p-3-3.webp" alt="Captura del sitio web Municipalidad de Alajuelita 3"  loading="lazy" decoding="async">
+        <img src="img/p-3-4.webp" alt="Captura del sitio web Municipalidad de Alajuelita 4"  loading="lazy" decoding="async">
+        <img src="img/p-3-5.webp" alt="Captura del sitio web Municipalidad de Alajuelita 5"  loading="lazy" decoding="async">
+        <img src="img/p-3-6.webp" alt="Captura del sitio web Municipalidad de Alajuelita 6"  loading="lazy" decoding="async">
+      </div>
+    </div>
+
+    <div class="icon-scroll" aria-hidden="true"></div>
+
+    <div class="modal-close-area">
+      <button 
+        class="close_button close-modal"
+        type="button"
+        aria-label="Cerrar ventana de detalles del proyecto Municipalidad Alajuelita"
+      >
+        <div class="line1"></div>
+        <div class="line2"></div>
+      </button>
+    </div>
+  </section>
+</div>
+
         <div class="linea-ancha"></div>
-        <div class="proyecto">
-            <p class="fecha">25 de agosto de 2025</p>
-             <img class="imagen-proy" src="img/p-2-2.webp" alt="pagina SEHAN">
-            <h3 class="titulo-proyecto">SEHAN<a href="https://sehan.netlify.app/" class="link"><img src="img/up-right.png" alt="icono enlace"></a></h3>
-            <button class="ver-mas">Ver</button>
-            <section class="modal-detalles">
-                <h3 class="titulo-proyecto">PROYECTO SEHAN<a href="https://sehan.netlify.app/" class="link"><img src="img/up-right.png" alt="icono enlace"></a></h3>
-                <div class="modal-contenido">
-                    <div class="mod-txt">
-                    <h5>CATEGORÍA <span>Diseño UX/UI - Desarrollo Web</span></h5>
-                    <h5>AÑO <span>2025</span></h5>
-                    <h5>CLIENTE <span>Sara</span></h5>
-                    <h5>EQUIPO <span>MADE - GNNIS</span></h5>
-                    <p class="mod-des">SEHAN es una página web moderna 
-                para un salón de belleza, diseñada con un enfoque limpio 
-                y responsivo. Presenta los servicios 
-                principales del salón y facilita el contacto directo 
-                con los clientes.</p>
-                    </div>
-                        <div class="modal-galeria">
-                            <img src="img/p-2-1.webp" alt="pagina sehan en moviles">
-                            <img src="img/p-2-2.webp" alt="pagina sehan en moviles">
-                            <img src="img/p-2-3.webp" alt="pagina sehan en moviles">
-                            <img src="img/p-2-4.webp" alt="pagina sehan en moviles">
-                            <img src="img/p-2-5.webp" alt="pagina sehan en moviles">
-                            <img src="img/p-2-6.webp" alt="pagina sehan en moviles">
-                            <img src="img/p-2-7.webp" alt="pagina sehan en moviles">
-                            <img src="img/p-2-8.webp" alt="pagina sehan en moviles">
-                        </div>
-                </div>
-                <div class='icon-scroll'></div>
-                <div class="modal-close-area">
-                    <div class="close_button close-modal">
-                        <div class="line1"></div>
-                        <div class="line2"></div>
-                    </div>
-                </div>
-            </section>
-        </div>
+        <article class="proyecto">
+  <p class="fecha">25 de agosto de 2025</p>
+
+  <img 
+    class="imagen-proy" 
+    src="img/p-2-2.webp" 
+    alt="Vista previa del sitio web SEHAN" 
+    loading="lazy"
+    decoding="async"
+  >
+
+  <h3 class="titulo-proyecto">
+    SEHAN
+    <a 
+      href="https://sehan.netlify.app/" 
+      class="link" 
+      aria-label="Abrir sitio SEHAN en nueva pestaña" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      <img src="img/up-right.png" alt="" aria-hidden="true">
+    </a>
+  </h3>
+
+  <button class="ver-mas" aria-haspopup="dialog" aria-controls="modal-sehan">
+    Ver
+  </button>
+
+  <section class="modal-detalles" id="modal-sehan" role="dialog" aria-modal="true" hidden>
+    <h3 class="titulo-proyecto">
+      PROYECTO SEHAN
+      <a 
+        href="https://sehan.netlify.app/" 
+        class="link" 
+        aria-label="Abrir sitio SEHAN en nueva pestaña"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="img/up-right.png" alt="" aria-hidden="true">
+      </a>
+    </h3>
+
+    <div class="modal-contenido">
+      <div class="mod-txt">
+        <h5>CATEGORÍA <span>Diseño UX/UI - Desarrollo Web</span></h5>
+        <h5>AÑO <span>2025</span></h5>
+        <h5>CLIENTE <span>Sara</span></h5>
+        <h5>EQUIPO <span>MADE - GNNIS</span></h5>
+        <p class="mod-des">
+          SEHAN es una página web moderna para un salón de belleza, diseñada con un enfoque limpio y responsivo. Presenta los servicios principales del salón y facilita el contacto directo con los clientes.
+        </p>
+      </div>
+
+      <div class="modal-galeria">
+        <img src="img/p-2-1.webp" alt="Página SEHAN en móviles" loading="lazy" decoding="async">
+        <img src="img/p-2-2.webp" alt="Página SEHAN en móviles" loading="lazy" decoding="async">
+        <img src="img/p-2-3.webp" alt="Página SEHAN en móviles" loading="lazy" decoding="async">
+        <img src="img/p-2-4.webp" alt="Página SEHAN en móviles" loading="lazy" decoding="async">
+        <img src="img/p-2-5.webp" alt="Página SEHAN en móviles" loading="lazy" decoding="async">
+        <img src="img/p-2-6.webp" alt="Página SEHAN en móviles" loading="lazy" decoding="async">
+        <img src="img/p-2-7.webp" alt="Página SEHAN en móviles" loading="lazy" decoding="async">
+        <img src="img/p-2-8.webp" alt="Página SEHAN en móviles" loading="lazy" decoding="async">
+      </div>
+    </div>
+
+    <div class="icon-scroll" aria-hidden="true"></div>
+
+    <div class="modal-close-area">
+      <button class="close_button close-modal" aria-label="Cerrar detalles del proyecto">
+        <span class="line1"></span>
+        <span class="line2"></span>
+      </button>
+    </div>
+  </section>
+</article>
+
         <div class="linea-ancha"></div>
-        <div class="proyecto">
-            <p class="fecha">9 de noviembre de 2023</p>
-             <img class="imagen-proy" src="img/p-1-2.webp" alt="pagina CORFyJ">
-            <h3 class="titulo-proyecto">CORFyJ<a href="https://corfyj.com/" class="link"><img src="img/up-right.png" alt="icono enlace"></a></h3>
-            <button class="ver-mas">Ver</button>
-            <section class="modal-detalles">
-                <h3 class="titulo-proyecto">PROYECTO CORFyJ<a href="https://corfyj.com/" class="link"><img src="img/up-right.png" alt="icono enlace"></a></h3>
-                <div class="modal-contenido">
-                    <div class="mod-txt">
-                    <h5>CATEGORÍA <span>Diseño UX/UI - Desarrollo Web</span></h5>
-                    <h5>AÑO <span>2023</span></h5>
-                    <h5>CLIENTE <span>CORFyJ</span></h5>
-                    <h5>EQUIPO <span>GNNIS</span></h5>
-                    <p class="mod-des">CORFyJ es una empresa costarricense dedicada a la construcción, 
-                        remodelación y asesoría técnica. Su sitio web presenta una oferta integral de servicios 
-                        que abarca desde proyectos residenciales hasta obras industriales, con un enfoque en 
-                        soluciones sostenibles, diseño funcional y atención personalizada.</p>
-                </div>
-                        <div class="modal-galeria">
-                            <img src="img/p-1-1.webp" alt="pagina CORFyJ">
-                            <img src="img/p-1-2.webp" alt="imagen pagina CORFyJ">
-                            <img src="img/p-1-3.webp" alt="imagen pagina CORFyJ">
-                            <img src="img/p-1-4.webp" alt="imagen pagina CORFyJ">
-                            <img src="img/p-1-5.webp" alt="imagen pagina CORFyJ">
-                            <img src="img/p-1-6.webp" alt="imagen pagina CORFyJ">
-                            <img src="img/p-1-7.webp" alt="imagen pagina CORFyJ">
-                            <img src="img/p-1-8.webp" alt="imagen pagina CORFyJ">
-                        </div>
-                </div>
-                <div class='icon-scroll'></div>
-                <div class="modal-close-area">
-                    <div class="close_button close-modal">
-                        <div class="line1"></div>
-                        <div class="line2"></div>
-                    </div>
-                </div>
-            </section>
-        </div>
+        <article class="proyecto">
+  <p class="fecha">9 de noviembre de 2023</p>
+
+  <img 
+    class="imagen-proy" 
+    src="img/p-1-2.webp" 
+    alt="Vista previa del sitio web CORFyJ" 
+    loading="lazy" 
+    decoding="async"
+  >
+
+  <h3 class="titulo-proyecto">
+    CORFyJ
+    <a 
+      href="https://corfyj.com/" 
+      class="link" 
+      aria-label="Abrir sitio CORFyJ en nueva pestaña" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      <img src="img/up-right.png" alt="" aria-hidden="true">
+    </a>
+  </h3>
+
+  <button class="ver-mas" aria-haspopup="dialog" aria-controls="modal-corfyj">
+    Ver
+  </button>
+
+  <section class="modal-detalles" id="modal-corfyj" role="dialog" aria-modal="true" hidden>
+    <h3 class="titulo-proyecto">
+      PROYECTO CORFyJ
+      <a 
+        href="https://corfyj.com/" 
+        class="link" 
+        aria-label="Abrir sitio CORFyJ en nueva pestaña"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="img/up-right.png" alt="" aria-hidden="true">
+      </a>
+    </h3>
+
+    <div class="modal-contenido">
+      <div class="mod-txt">
+        <h5>CATEGORÍA <span>Diseño UX/UI - Desarrollo Web</span></h5>
+        <h5>AÑO <span>2023</span></h5>
+        <h5>CLIENTE <span>CORFyJ</span></h5>
+        <h5>EQUIPO <span>GNNIS</span></h5>
+
+        <p class="mod-des">
+          CORFyJ es una empresa costarricense dedicada a la construcción, 
+          remodelación y asesoría técnica. Su sitio web presenta una oferta integral 
+          de servicios que abarca desde proyectos residenciales hasta obras industriales, 
+          con un enfoque en soluciones sostenibles, diseño funcional y atención personalizada.
+        </p>
+      </div>
+
+      <div class="modal-galeria">
+        <img src="img/p-1-1.webp" alt="Vista del sitio CORFyJ en escritorio" loading="lazy" decoding="async">
+        <img src="img/p-1-2.webp" alt="Vista del sitio CORFyJ en móviles" loading="lazy" decoding="async">
+        <img src="img/p-1-3.webp" alt="Sección proyectos CORFyJ" loading="lazy" decoding="async">
+        <img src="img/p-1-4.webp" alt="Detalle del sitio CORFyJ" loading="lazy" decoding="async">
+        <img src="img/p-1-5.webp" alt="Galería de obras CORFyJ" loading="lazy" decoding="async">
+        <img src="img/p-1-6.webp" alt="Diseño responsivo CORFyJ" loading="lazy" decoding="async">
+        <img src="img/p-1-7.webp" alt="Página de contacto CORFyJ" loading="lazy" decoding="async">
+        <img src="img/p-1-8.webp" alt="Sección principal del sitio CORFyJ" loading="lazy" decoding="async">
+      </div>
+    </div>
+
+    <div class="icon-scroll" aria-hidden="true"></div>
+
+    <div class="modal-close-area">
+      <button class="close_button close-modal" aria-label="Cerrar detalles del proyecto">
+        <span class="line1"></span>
+        <span class="line2"></span>
+      </button>
+    </div>
+  </section>
+</article>
+
         <div class="linea-ancha"></div>
     </section>
-    <section id="contacto" class="contacto">
-        <h2>CONTACTAME</h2>
-        <div class="linea-ancha"></div>
-        <span class="confirmacion confirmacion1">ENVIADO!!</span>
-        <form class="form-contacto" action="https://formsubmit.co/gennismac@gmail.com" method="POST">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Email" required>
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
-            <div class="estado-form">
-                <div></div>
-                <div class="cont-estado">
-                    <div class="estado" data-input="nombre">
-                    <div class="linea-form1"></div>
-                    <div class="linea-form2"></div>
-                    <div class="linea-form3"></div>
-                    <div class="linea-form4"></div>
-                </div>
-                <div class="estado" data-input="email">
-                    <div class="linea-form1"></div>
-                    <div class="linea-form2"></div>
-                    <div class="linea-form3"></div>
-                    <div class="linea-form4"></div>
-                </div>
-                <div class="estado" data-input="mensaje">
-                    <div class="linea-form1"></div>
-                    <div class="linea-form2"></div>
-                    <div class="linea-form3"></div>
-                    <div class="linea-form4"></div>
-                </div>
-                </div>
-                <button class="btn-enviar" type="submit"><img src="img/arrow.svg" alt="icono adelante"></button>
-            </div>
-        </form>
-        <span class="confirmacion confirmacion2">ENVIADO!!</span>
-    </section>
-    <footer>
-        <div class="loader"></div>
-        <p class="titulo-footer">Gnnis</p>
-        <div class="menu-footer">
-            <a href="index.html"><span>[</span>INDEX<span>]</span></a>
-            <a href="#proyectos"><span>[</span>PROYECTOS<span></span>]</span></a>
-            <a href="galeria.html"><span>[</span>FOTOS<span>]</span></a>
-            <a href="#contacto"><span>[</span>CONTACTO<span>]</span></a>
+  <section id="contacto" class="contacto">
+  <h2>CONTACTAME</h2>
+  <div class="linea-ancha"></div>
+
+  <!-- Mensaje de confirmación -->
+  <span class="confirmacion confirmacion1">ENVIADO!!</span>
+
+  <form 
+    class="form-contacto" 
+    action="https://formsubmit.co/gennismac@gmail.com" 
+    method="POST"
+  >
+    <label for="nombre">Nombre</label>
+    <input 
+      type="text" 
+      id="nombre" 
+      name="nombre" 
+      placeholder="Nombre" 
+      required 
+      autocomplete="name"
+    >
+
+    <label for="email">Email</label>
+    <input 
+      type="email" 
+      id="email" 
+      name="email" 
+      placeholder="Email" 
+      required 
+      autocomplete="email"
+    >
+
+    <label for="mensaje">Mensaje</label>
+    <textarea 
+      id="mensaje" 
+      name="mensaje" 
+      placeholder="Mensaje" 
+      required
+    ></textarea>
+
+    <div class="estado-form">
+      <div></div>
+      <div class="cont-estado">
+
+        <div class="estado" data-input="nombre">
+          <div class="linea-form1"></div>
+          <div class="linea-form2"></div>
+          <div class="linea-form3"></div>
+          <div class="linea-form4"></div>
         </div>
-        <p class="copyright">&copy; 2025 Gnnis.</p>
-        <div class="redes-sociales">
-            <a target="_blank" href="https://wa.me/+50661920922"><img src="img/whatsapp.svg" alt="whatsapp"></a>
-            <a target="_blank" href="https://www.instagram.com/gnnis_/"><img src="img/instagram.svg" alt="Instagram"></a>
+
+        <div class="estado" data-input="email">
+          <div class="linea-form1"></div>
+          <div class="linea-form2"></div>
+          <div class="linea-form3"></div>
+          <div class="linea-form4"></div>
         </div>
-    </footer>
+
+        <div class="estado" data-input="mensaje">
+          <div class="linea-form1"></div>
+          <div class="linea-form2"></div>
+          <div class="linea-form3"></div>
+          <div class="linea-form4"></div>
+        </div>
+
+      </div>
+
+      <button class="btn-enviar" type="submit" aria-label="Enviar formulario">
+        <img src="img/arrow.svg" alt="icono enviar">
+      </button>
+    </div>
+  </form>
+
+  <!-- Segundo mensaje de confirmación -->
+  <span class="confirmacion confirmacion2">ENVIADO!!</span>
+</section>
+
+
+    <footer role="contentinfo">
+  <div class="loader" aria-hidden="true"></div>
+
+  <p class="titulo-footer" aria-label="Nombre del sitio">Gnnis</p>
+
+  <nav class="menu-footer" aria-label="Menú de navegación del pie de página">
+    <a href="index.html"><span>[</span>INDEX<span>]</span></a>
+    <a href="#proyectos"><span>[</span>PROYECTOS<span>]</span></a>
+    <a href="galeria.html"><span>[</span>FOTOS<span>]</span></a>
+    <a href="#contacto"><span>[</span>CONTACTO<span>]</span></a>
+  </nav>
+
+  <p class="copyright">
+    &copy; <span id="anio-actual">2025</span> Gnnis.
+  </p>
+
+  <div class="redes-sociales" aria-label="Redes sociales">
+    <a 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      href="https://wa.me/+50661920922" 
+      aria-label="WhatsApp de Gnnis"
+    >
+      <img src="img/whatsapp.svg" alt="" loading="lazy" decoding="async" aria-hidden="true">
+    </a>
+
+    <a 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      href="https://www.instagram.com/gnnis_/" 
+      aria-label="Instagram de Gnnis"
+    >
+      <img src="img/instagram.svg" alt="" loading="lazy" decoding="async" aria-hidden="true">
+    </a>
+  </div>
+</footer>
+
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -277,6 +277,7 @@ header {
     border-radius: 50%;
     padding: 0.5rem;
     transition: opacity .4s ease, border .1s ease;
+    background-color: transparent;
 }
 
 /*========btn de cerrar==========*/
@@ -295,6 +296,7 @@ header {
     padding: 0.5rem;
     transition: all 1s ease;
     animation: girar 8s infinite;
+    background-color: transparent;
 }
 
 .close_button .line1 {
