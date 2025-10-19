@@ -129,21 +129,39 @@ document.querySelectorAll('.estado').forEach(estado => {
   });
 });
 
-form.addEventListener('submit', e => {
-  e.preventDefault(); // evita recargar la página
 
-  // quitar animaciones si ya se habían usado antes
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+
+  // animaciones
   confir1.style.animation = 'none';
   confir2.style.animation = 'none';
   void confir1.offsetWidth;
   void confir2.offsetWidth;
-
-  // activar animaciones
   confir1.style.animation = 'confir1 10s forwards';
   confir2.style.animation = 'confir2 10s forwards';
 
-  form.reset();
-  verificarCampos();
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      form.reset();
+      verificarCampos();
+      console.log("Formulario enviado con éxito");
+    } else {
+      console.error("Error al enviar el formulario");
+    }
+  } catch (error) {
+    console.error("Error de red:", error);
+  }
 });
 
 const doom = document.querySelector(".doom");
