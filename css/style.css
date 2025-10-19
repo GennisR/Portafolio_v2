@@ -83,7 +83,7 @@ header {
     top: 0;
     left: -101vw;
     background-color: #000000;
-    height: 100vh;
+    height: 100dvh;
     width: 100dvw;
     display: flex;
     flex-direction: column;
