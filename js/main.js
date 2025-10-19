@@ -38,7 +38,7 @@ function scroll_off(){
 
 
 
-//--------Activacion del menu y blur//
+//Activacion del menu y blur//
 
 burger.addEventListener('click', () => {
     btn_menu();
