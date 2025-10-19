@@ -10,6 +10,11 @@
         color: #d3d3d3;
     }
 
+    .modo-osc .ver-mas:hover {
+        background-color: #d3d3d3;
+        color: #0a2239;
+    }
+
     .modo-osc .burger, .modo-osc .barra,.modo-osc .modal-detalles .close-modal, .modo-osc .ver-mas, .modo-osc .estado-activo, .modo-osc .btn-inicio{
         border: 1px solid #d3d3d3;
     }
